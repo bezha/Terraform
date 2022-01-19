@@ -1,4 +1,4 @@
-# Highly Available CV with AWS Application ELB & ASG on 3 docker containers in 3 availablity zones provision with Terraform
+# Highly Available CV with AWS Application ELB & ASG on minimum 3 EC2 capacity with docker containers in 3 availablity zones provision with Terraform
 
 This folder contains an example [Terraform](https://www.terraform.io/) configuration that deploys a cluster of web servers 
 (using [EC2](https://aws.amazon.com/ec2/) and [Auto Scaling](https://aws.amazon.com/autoscaling/)) with prepaired user_data in docker containers and a load balancer (using [ELB](https://aws.amazon.com/elasticloadbalancing/)) in an [Amazon Web Services (AWS) 
