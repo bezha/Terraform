@@ -4,6 +4,8 @@ This folder contains an example [Terraform](https://www.terraform.io/) configura
 (using [EC2](https://aws.amazon.com/ec2/) with prepaired user_data that have 3 different colors CV in docker containers and a load balancer (using [ELB](https://aws.amazon.com/elasticloadbalancing/)) in an [Amazon Web Services (AWS) 
 account](http://aws.amazon.com/). The load balancer listens on port 80 and returns the 3 different color CV for the  `/` URL.
 
+![Highly Available CV](https://user-images.githubusercontent.com/426963/150141754-3a1e3bcb-813e-4329-b275-87231a418958.png) 
+
 ## Pre-requisites
 
 * You must have [Terraform](https://www.terraform.io/) installed on your computer. 
@@ -26,7 +28,7 @@ terraform init
 terraform apply
 ```
 
-When the `apply` command completes, it will output the DNS name of the load balancer. To test the load balancer:
+When the `apply` command completes, it will output the DNS name of the load balancer:
 
 ```
 alb_dns_name = "CV-xxxxxxxxxxx.eu-central-1.elb.amazonaws.com"
@@ -41,3 +43,4 @@ Clean up when done:
 ```
 terraform destroy
 ```
+
