@@ -4,6 +4,8 @@ This folder contains an example [Terraform](https://www.terraform.io/) configura
 (using [EC2](https://aws.amazon.com/ec2/) and [Auto Scaling](https://aws.amazon.com/autoscaling/)) with prepaired user_data in docker containers and a load balancer (using [ELB](https://aws.amazon.com/elasticloadbalancing/)) in an [Amazon Web Services (AWS) 
 account](http://aws.amazon.com/). The load balancer listens on port 80 and returns the CV for the  `/` URL.
 
+![Highly Available CV with ASG ](https://user-images.githubusercontent.com/426963/150160415-3f5aacb7-cb58-4683-b667-4aa4fa8d0f24.png)
+
 ## Pre-requisites
 
 * You must have [Terraform](https://www.terraform.io/) installed on your computer. 
