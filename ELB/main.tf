@@ -9,7 +9,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "cv_turquoise" {
-  ami                    = "ami-05cafdf7c9f772ad2"
+  ami                    = var.ami_image_id
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.cv.id]
   user_data              = file("cv_turquoise.sh")
@@ -23,7 +23,7 @@ resource "aws_instance" "cv_turquoise" {
 }
 
 resource "aws_instance" "cv_green" {
-  ami                    = "ami-05cafdf7c9f772ad2"
+  ami                    = var.ami_image_id
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.cv.id]
   user_data              = file("cv_green.sh")
@@ -37,7 +37,7 @@ resource "aws_instance" "cv_green" {
 }
 
 resource "aws_instance" "cv_burgundy" {
-  ami                    = "ami-05cafdf7c9f772ad2"
+  ami                    = var.ami_image_id
   instance_type          = "t2.micro"
   vpc_security_group_ids = [aws_security_group.cv.id]
   user_data              = file("cv_burgundy.sh")
