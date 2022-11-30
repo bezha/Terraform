@@ -3,10 +3,10 @@ provider "aws" {
 }
 
 resource "aws_launch_template" "cv" {
-  image_id      = "ami-05d34d340fb1d89e5"
-  instance_type = "t2.micro"
-  user_data     = filebase64("cv_turquoise.sh")
-  key_name      = "CliKey"
+  image_id               = "ami-05d34d340fb1d89e5"
+  instance_type          = "t2.micro"
+  user_data              = filebase64("user-data.sh")
+  key_name               = "CliKey"
   vpc_security_group_ids = ["sg-0d779d04c2dac73a3"]
 }
 
@@ -19,10 +19,10 @@ resource "aws_autoscaling_group" "cv" {
 
   target_group_arns = [aws_lb_target_group.asg.arn]
   health_check_type = "ELB"
-  
-  desired_capacity          = 2
-  min_size = 2
-  max_size = 3
+
+  desired_capacity = 3
+  min_size         = 3
+  max_size         = 4
 
   tag {
     key                 = "Name"
